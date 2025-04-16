@@ -1,0 +1,248 @@
+﻿<Page x:Class="Coffe_Grinder.CreateOrderPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Coffe_Grinder"
+      mc:Ignorable="d" 
+      d:DesignHeight="768" d:DesignWidth="1366"
+      Title="Create New Order">
+
+    <Page.Resources>
+        <Style x:Key="FormLabel" TargetType="Label">
+            <Setter Property="Foreground" Value="#5D4037"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="0,5,0,2"/>
+        </Style>
+
+        <Style x:Key="FormTextBox" TargetType="TextBox">
+            <Setter Property="Height" Value="32"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
+        </Style>
+
+        <Style x:Key="ActionButton" TargetType="Button">
+            <Setter Property="Background" Value="#8D6E63"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Padding" Value="15,5"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Margin" Value="5"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#6D4C41"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="RemoveButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#8D6E63"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Padding" Value="8,2"/>
+            <Setter Property="Height" Value="28"/>
+            <Setter Property="Width" Value="80"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#6D4C41"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="CoffeeCard" TargetType="Border">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="CornerRadius" Value="5"/>
+            <Setter Property="BorderBrush" Value="#D7CCC8"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect BlurRadius="5" ShadowDepth="2" Opacity="0.2"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- DataGrid Style -->
+        <Style x:Key="OrderItemsGridStyle" TargetType="DataGrid">
+            <Setter Property="HeadersVisibility" Value="Column"/>
+            <Setter Property="IsReadOnly" Value="True"/>
+            <Setter Property="RowHeight" Value="35"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="AutoGenerateColumns" Value="False"/>
+            <Setter Property="VerticalScrollBarVisibility" Value="Auto"/>
+            <Setter Property="HorizontalScrollBarVisibility" Value="Disabled"/>
+            <Setter Property="MinHeight" Value="200"/>
+        </Style>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="brownorders.jpg" Stretch="UniformToFill" Opacity="0.9"/>
+        </Grid.Background>
+
+        <!-- Main Content Container -->
+        <Border Margin="40" Background="#FFF8E1" CornerRadius="8"
+                BorderBrush="#BCAAA4" BorderThickness="1">
+            <Grid Margin="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <!-- Header -->
+                <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Image Source="ordericon.png" Width="40" Height="40" Margin="0,0,10,0"/>
+                    <TextBlock Text="CREATE NEW ORDER" FontSize="24" FontWeight="Bold" 
+                               Foreground="#5D4037" VerticalAlignment="Center"/>
+                </StackPanel>
+
+                <!-- Order Form -->
+                <Grid Grid.Row="1" Margin="0,20,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Customer Information -->
+                    <Border Grid.Column="0" Background="White" CornerRadius="8" Padding="15">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Grid.Row="0" Text="CUSTOMER INFORMATION" FontSize="16" FontWeight="Bold"
+                                       Foreground="#5D4037" Margin="0,0,0,10"/>
+
+                            <StackPanel Grid.Row="1">
+                                <Label Content="Customer Name:" Style="{StaticResource FormLabel}"/>
+                                <TextBox x:Name="CustomerName" Style="{StaticResource FormTextBox}"/>
+                            </StackPanel>
+
+                            <StackPanel Grid.Row="2">
+                                <Label Content="Phone Number:" Style="{StaticResource FormLabel}"/>
+                                <TextBox x:Name="CustomerPhone" Style="{StaticResource FormTextBox}"/>
+                            </StackPanel>
+
+                            <!-- Coffee Selection Grid -->
+                            <Label Grid.Row="3" Content="Available Coffees:" Style="{StaticResource FormLabel}" Margin="0,20,0,5"/>
+
+                            <!-- Using Grid.Row="4" with * height to take remaining space -->
+                            <ScrollViewer Grid.Row="4" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                                <ItemsControl x:Name="CoffeeSelectionGrid">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <WrapPanel Orientation="Horizontal"/>
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <Border Style="{StaticResource CoffeeCard}" Width="200">
+                                                <StackPanel>
+                                                    <TextBlock Text="{Binding CoffeeName}" FontWeight="Bold" Foreground="#5D4037"/>
+                                                    <TextBlock Text="{Binding CoffeeType.TypeName}" FontSize="12" Foreground="#795548"/>
+                                                    <TextBlock Text="{Binding UnitPrice, StringFormat=C}" FontSize="14" Foreground="#BF360C" Margin="0,5,0,0"/>
+                                                    <TextBlock Text="{Binding StringFormat='Stock: {0}kg', Path=MaxQuantity}" FontSize="12" Foreground="#78909C"/>
+
+                                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+                                                        <Button Content="-" Width="25" Click="DecreaseQuantity_Click" 
+                                                                Tag="{Binding CoffeeID}" Style="{StaticResource ActionButton}" Padding="5"/>
+                                                        <TextBox Text="{Binding Quantity, Mode=OneWay}" Width="40" Margin="5,0" 
+                                                                 TextAlignment="Center" IsReadOnly="True" Background="Transparent" BorderThickness="0"/>
+                                                        <Button Content="+" Width="25" Click="IncreaseQuantity_Click" 
+                                                                Tag="{Binding CoffeeID}" Style="{StaticResource ActionButton}" Padding="5"/>
+                                                    </StackPanel>
+                                                </StackPanel>
+                                            </Border>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </ScrollViewer>
+                        </Grid>
+                    </Border>
+
+                    <!-- Order Items -->
+                    <Border Grid.Column="2" Background="White" CornerRadius="8" Padding="15">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Grid.Row="0" Text="YOUR ORDER ITEMS" FontSize="16" FontWeight="Bold"
+                                       Foreground="#5D4037" Margin="0,0,0,10"/>
+
+                            <!-- Order Items Grid -->
+                            <DataGrid Grid.Row="1" x:Name="OrderItemsGrid" Style="{StaticResource OrderItemsGridStyle}">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Coffee" Binding="{Binding CoffeeName}" Width="*"/>
+                                    <DataGridTextColumn Header="Type" Binding="{Binding CoffeeType.TypeName}" Width="0.8*"/>
+                                    <DataGridTextColumn Header="Qty (kg)" Binding="{Binding Quantity}" Width="0.5*"/>
+                                    <DataGridTextColumn Header="Price" Binding="{Binding UnitPrice, StringFormat=C}" Width="0.6*"/>
+                                    <DataGridTextColumn Header="Subtotal" Binding="{Binding Subtotal, StringFormat=C}" Width="0.7*"/>
+                                    <DataGridTemplateColumn Width="90">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <Button Content="Remove" Click="RemoveItem_Click" 
+                                                        Style="{StaticResource RemoveButtonStyle}"/>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Grid>
+                    </Border>
+                </Grid>
+
+                <!-- Order Summary and Actions -->
+                <Border Grid.Row="2" Background="#D7CCC8" CornerRadius="8" Margin="0,20,0,0" Padding="15">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                            <Label Content="Order Notes:" Style="{StaticResource FormLabel}" VerticalAlignment="Center"/>
+                            <TextBox x:Name="OrderNotes" Width="300" Margin="10,0,0,0" Height="32" FontSize="14"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
+                            <TextBlock Text="TOTAL:" FontSize="16" FontWeight="Bold" Foreground="#5D4037"
+                                       VerticalAlignment="Center" Margin="0,0,10,0"/>
+                            <TextBlock x:Name="OrderTotal" Text="0.00" FontSize="20" FontWeight="Bold"
+                                       Foreground="#BF360C" VerticalAlignment="Center"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right">
+                            <Button Content="Clear Order" Click="ClearOrder_Click" 
+                                    Style="{StaticResource ActionButton}" Background="#78909C"/>
+                            <Button Content="Submit Order" Click="SubmitOrder_Click" 
+                                    Style="{StaticResource ActionButton}" Background="#5D4037"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

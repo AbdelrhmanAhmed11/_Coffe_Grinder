@@ -1,0 +1,322 @@
+-- Drop existing tables if they exist
+DROP TABLE IF EXISTS AuditLogs;
+DROP TABLE IF EXISTS UserLogins;
+DROP TABLE IF EXISTS Alerts;
+DROP TABLE IF EXISTS OrderDetails;
+DROP TABLE IF EXISTS Orders;
+DROP TABLE IF EXISTS CoffeeInventory;
+DROP TABLE IF EXISTS CoffeeTypes;
+DROP TABLE IF EXISTS Users;
+DROP TABLE IF EXISTS OrderStatuses;
+GO
+
+-- Create Users table
+CREATE TABLE Users
+(
+    UserID INT PRIMARY KEY IDENTITY(1,1),
+    Username NVARCHAR(50) NOT NULL,
+    Password NVARCHAR(64) NOT NULL,
+    Role NVARCHAR(10) NOT NULL,
+    PhoneNumber NVARCHAR(15) NULL
+);
+GO
+
+-- Create CoffeeTypes table
+CREATE TABLE CoffeeTypes
+(
+    CoffeeTypeID INT PRIMARY KEY IDENTITY(1,1),
+    TypeName VARCHAR(100)
+);
+GO
+
+-- Create CoffeeInventory table
+CREATE TABLE CoffeeInventory
+(
+    CoffeeID INT PRIMARY KEY IDENTITY(1,1),
+    CoffeeTypeID INT,
+    QuantityInStock INT CHECK (QuantityInStock >= 0),
+    PricePerKg DECIMAL(10,2) CHECK (PricePerKg >= 0),
+    CoffeeName NVARCHAR(100),
+    Description NVARCHAR(MAX),
+    FOREIGN KEY (CoffeeTypeID) REFERENCES CoffeeTypes(CoffeeTypeID)
+);
+GO
+
+-- Create OrderStatuses table
+CREATE TABLE OrderStatuses (
+    StatusID INT PRIMARY KEY IDENTITY(1,1),
+    StatusName NVARCHAR(50) NOT NULL
+);
+GO
+
+-- Create Orders table
+CREATE TABLE Orders
+(
+    OrderID INT PRIMARY KEY IDENTITY(1,1),
+    OrderDate DATETIME,
+    StatusID INT,
+    CustomerName VARCHAR(100),
+    TotalPrice DECIMAL(10,2),
+    UserID INT,
+    PhoneNumber NVARCHAR(15) NULL,
+    Notes NVARCHAR(MAX) NULL,
+    FOREIGN KEY (UserID) REFERENCES Users(UserID),
+    FOREIGN KEY (StatusID) REFERENCES OrderStatuses(StatusID)
+);
+GO
+
+-- Create OrderDetails table with CASCADE DELETE
+CREATE TABLE OrderDetails
+(
+    OrderDetailID INT PRIMARY KEY IDENTITY(1,1),
+    OrderID INT,
+    CoffeeID INT,
+    Quantity INT CHECK (Quantity > 0),
+    UnitPrice DECIMAL(10,2) CHECK (UnitPrice >= 0),
+    FOREIGN KEY (OrderID) REFERENCES Orders(OrderID),
+    FOREIGN KEY (CoffeeID) REFERENCES CoffeeInventory(CoffeeID) ON DELETE CASCADE
+);
+GO
+
+-- Create Alerts table
+CREATE TABLE Alerts
+(
+    AlertID INT PRIMARY KEY IDENTITY(1,1),
+    Message TEXT,
+    CreatedAt DATETIME DEFAULT GETDATE(),
+    IsRead BIT DEFAULT 0,
+    OrderID INT NULL,
+    FOREIGN KEY (OrderID) REFERENCES Orders(OrderID)
+);
+GO
+
+-- Create UserLogins table
+CREATE TABLE UserLogins (
+    LoginID INT PRIMARY KEY IDENTITY(1,1),
+    UserID INT,
+    LoginTime DATETIME DEFAULT GETDATE(),
+    IPAddress NVARCHAR(50),
+    FOREIGN KEY (UserID) REFERENCES Users(UserID)
+);
+GO
+
+-- Create AuditLogs table
+CREATE TABLE AuditLogs (
+    LogID INT PRIMARY KEY IDENTITY(1,1),
+    TableName NVARCHAR(50),
+    Action NVARCHAR(50),
+    UserID INT,
+    Timestamp DATETIME DEFAULT GETDATE(),
+    Description NVARCHAR(MAX),
+    FOREIGN KEY (UserID) REFERENCES Users(UserID)
+);
+GO
+
+-- Insert sample data into Users (must be first)
+INSERT INTO Users (Username, Password, PhoneNumber, Role)
+VALUES 
+('Admin', 'admin123', NULL, 'Admin'),
+('User1', 'user1123', '1234567890', 'User'),
+('User2', 'user2123', '0987654321', 'User');
+GO
+
+-- Insert sample data into CoffeeTypes
+INSERT INTO CoffeeTypes (TypeName)
+VALUES 
+('Arabica'),
+('Robusta'),
+('Liberica'),
+('Civet'),
+('Excelsa');
+GO
+
+-- Insert sample data into CoffeeInventory
+INSERT INTO CoffeeInventory (CoffeeTypeID, QuantityInStock, PricePerKg, CoffeeName, Description)
+VALUES 
+(1, 50, 250.00, 'Ethiopian Arabica', 'A well-known coffee type with a smooth, slightly acidic flavor.'),
+(2, 100, 200.00, 'Vietnamese Robusta', 'A coffee type known for its strong, bitter taste.'),
+(3, 8, 300.00, 'Philippine Liberica', 'A coffee type with a fruity and unique flavor.'),
+(4, 15, 500.00, 'Indonesian Civet', 'A rare coffee type made from beans eaten and excreted by civet cats.'),
+(5, 30, 275.00, 'African Excelsa', 'A rare coffee with complex flavor notes.');
+GO
+
+-- Insert sample data into OrderStatuses
+INSERT INTO OrderStatuses (StatusName)
+VALUES ('Pending'), ('Completed'), ('Cancelled'), ('Processing'), ('Shipped');
+GO
+
+-- Insert sample data into Orders (must be before OrderDetails and Alerts)
+INSERT INTO Orders (OrderDate, StatusID, CustomerName, TotalPrice, UserID, PhoneNumber, Notes)
+VALUES 
+('2025-04-10 10:30:00', 1, 'Ahmed Ali', 700.00, 2, '1234567890', 'Please deliver in the morning'),
+('2025-04-12 14:15:00', 2, 'Mona Hassan', 600.00, 3, '0987654321', 'Gift wrapping needed'),
+('2025-04-13 09:45:00', 3, 'John Doe', 1500.00, 2, '1122334455', 'Urgent delivery'),
+('2025-04-15 16:20:00', 4, 'Sarah Johnson', 825.00, 3, '5566778899', NULL);
+GO
+
+-- Insert sample data into OrderDetails
+INSERT INTO OrderDetails (OrderID, CoffeeID, Quantity, UnitPrice)
+VALUES 
+(1, 1, 2, 250.00),
+(1, 2, 1, 200.00),
+(2, 3, 2, 300.00),
+(3, 4, 3, 500.00),
+(4, 1, 1, 250.00),
+(4, 3, 1, 300.00),
+(4, 5, 1, 275.00);
+GO
+
+-- Insert sample data into Alerts
+INSERT INTO Alerts (Message, CreatedAt, OrderID)
+VALUES 
+('New order from Ahmed Ali, 2kg of Arabica and 1kg of Robusta.', '2025-04-10 10:35:00', 1),
+('New order from Mona Hassan, 2kg of Liberica.', '2025-04-12 14:20:00', 2),
+('New order from John Doe, 3kg of Civet coffee.', '2025-04-13 09:50:00', 3),
+('New order from Sarah Johnson, 1kg each of Arabica, Liberica and Excelsa.', '2025-04-15 16:25:00', 4);
+GO
+
+-- Insert sample data into UserLogins
+INSERT INTO UserLogins (UserID, LoginTime, IPAddress)
+VALUES 
+(1, '2025-04-01 08:00:00', '192.168.1.100'),
+(2, '2025-04-10 10:00:00', '192.168.1.101'),
+(3, '2025-04-13 09:30:00', '192.168.1.102'),
+(2, '2025-04-15 16:00:00', '192.168.1.101');
+GO
+
+-- Trigger for insert
+CREATE TRIGGER trg_CoffeeInventory_Insert
+ON CoffeeInventory
+AFTER INSERT
+AS
+BEGIN
+    DECLARE @CoffeeID INT, @UserID INT = 1;
+    SELECT @CoffeeID = CoffeeID FROM inserted;
+
+    INSERT INTO AuditLogs (TableName, Action, UserID, Description)
+    VALUES ('CoffeeInventory', 'INSERT', @UserID, 'Inserted CoffeeID: ' + CAST(@CoffeeID AS NVARCHAR(50)));
+END;
+GO
+
+-- Trigger for update
+CREATE TRIGGER trg_CoffeeInventory_Update
+ON CoffeeInventory
+AFTER UPDATE
+AS
+BEGIN
+    DECLARE @CoffeeID INT, @OldQty INT, @NewQty INT, @OldPrice DECIMAL(10,2), @NewPrice DECIMAL(10,2), @UserID INT = 1;
+
+    SELECT TOP 1 
+        @CoffeeID = i.CoffeeID,
+        @OldQty = d.QuantityInStock,
+        @NewQty = i.QuantityInStock,
+        @OldPrice = d.PricePerKg,
+        @NewPrice = i.PricePerKg
+    FROM inserted i
+    JOIN deleted d ON i.CoffeeID = d.CoffeeID;
+
+    INSERT INTO AuditLogs (TableName, Action, UserID, Description)
+    VALUES (
+        'CoffeeInventory', 
+        'UPDATE', 
+        @UserID, 
+        'Updated CoffeeID: ' + CAST(@CoffeeID AS NVARCHAR(50)) + 
+        ' | Qty: ' + CAST(@OldQty AS NVARCHAR(50)) + ' -> ' + CAST(@NewQty AS NVARCHAR(50)) + 
+        ' | Price: ' + CAST(@OldPrice AS NVARCHAR(50)) + ' -> ' + CAST(@NewPrice AS NVARCHAR(50))
+    );
+END;
+GO
+
+-- Trigger for delete
+CREATE TRIGGER trg_CoffeeInventory_Delete
+ON CoffeeInventory
+AFTER DELETE
+AS
+BEGIN
+    DECLARE @CoffeeID INT, @OldQty INT, @OldPrice DECIMAL(10,2), @UserID INT = 1;
+
+    SELECT TOP 1 
+        @CoffeeID = CoffeeID, 
+        @OldQty = QuantityInStock, 
+        @OldPrice = PricePerKg
+    FROM deleted;
+
+    INSERT INTO AuditLogs (TableName, Action, UserID, Description)
+    VALUES (
+        'CoffeeInventory', 
+        'DELETE', 
+        @UserID, 
+        'Deleted CoffeeID: ' + CAST(@CoffeeID AS NVARCHAR(50)) + 
+        ' | Qty: ' + CAST(@OldQty AS NVARCHAR(50)) + 
+        ' | Price: ' + CAST(@OldPrice AS NVARCHAR(50))
+    );
+END;
+GO
+
+-- Create indexes for better performance
+CREATE INDEX IX_CoffeeInventory_CoffeeTypeID ON CoffeeInventory(CoffeeTypeID);
+CREATE INDEX IX_Orders_StatusID ON Orders(StatusID);
+CREATE INDEX IX_Orders_UserID ON Orders(UserID);
+CREATE INDEX IX_OrderDetails_OrderID ON OrderDetails(OrderID);
+CREATE INDEX IX_OrderDetails_CoffeeID ON OrderDetails(CoffeeID);
+CREATE INDEX IX_Alerts_OrderID ON Alerts(OrderID);
+CREATE INDEX IX_UserLogins_UserID ON UserLogins(UserID);
+CREATE INDEX IX_AuditLogs_UserID ON AuditLogs(UserID);
+GO
+
+-- Drop views if they exist
+DROP VIEW IF EXISTS vw_CoffeeInventoryWithTypes;
+DROP VIEW IF EXISTS vw_OrderDetailsExtended;
+GO
+
+-- View to show coffee inventory with type names
+CREATE VIEW vw_CoffeeInventoryWithTypes AS
+SELECT 
+    ci.CoffeeID,
+    ci.CoffeeName,
+    ct.TypeName,
+    ci.QuantityInStock,
+    ci.PricePerKg,
+    ci.Description
+FROM 
+    CoffeeInventory ci
+    JOIN CoffeeTypes ct ON ci.CoffeeTypeID = ct.CoffeeTypeID;
+GO
+
+-- View to show order details with product information
+CREATE VIEW vw_OrderDetailsExtended AS
+SELECT 
+    od.OrderDetailID,
+    o.OrderID,
+    o.OrderDate,
+    o.CustomerName,
+    os.StatusName,
+    ci.CoffeeName,
+    ct.TypeName AS CoffeeType,
+    od.Quantity,
+    od.UnitPrice,
+    (od.Quantity * od.UnitPrice) AS LineTotal
+FROM 
+    OrderDetails od
+    JOIN Orders o ON od.OrderID = o.OrderID
+    JOIN OrderStatuses os ON o.StatusID = os.StatusID
+    JOIN CoffeeInventory ci ON od.CoffeeID = ci.CoffeeID
+    JOIN CoffeeTypes ct ON ci.CoffeeTypeID = ct.CoffeeTypeID;
+GO
+
+-- Select all data from tables to verify
+SELECT * FROM Users;
+SELECT * FROM CoffeeTypes;
+SELECT * FROM CoffeeInventory;
+SELECT * FROM OrderStatuses;
+SELECT * FROM Orders;
+SELECT * FROM OrderDetails;
+SELECT * FROM Alerts;
+SELECT * FROM UserLogins;
+SELECT * FROM AuditLogs;
+GO
+
+-- Test the views
+SELECT * FROM vw_CoffeeInventoryWithTypes;
+SELECT * FROM vw_OrderDetailsExtended;
+GO

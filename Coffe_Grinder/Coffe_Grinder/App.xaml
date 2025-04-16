@@ -1,0 +1,46 @@
+﻿<Application x:Class="Coffe_Grinder.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Coffe_Grinder"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style x:Key="ModernButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#4CAF50"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="#45a049"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect BlurRadius="4" ShadowDepth="2" Opacity="0.3"/>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#45a049"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="DashboardButtonStyle" TargetType="Button">
+                <Setter Property="Background" Value="#8D6E63"/>
+                <Setter Property="Foreground" Value="white"/>
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="Height" Value="50"/>
+                <Setter Property="Width" Value="180"/>
+                <Setter Property="BorderBrush" Value="#5D4037"/>
+                <Setter Property="BorderThickness" Value="1"/>
+                <Setter Property="Margin" Value="0,10"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Cursor" Value="Hand"/>
+                <Setter Property="Padding" Value="10"/>
+                <Setter Property="BorderBrush" Value="#3E2723"/>
+                <Setter Property="BorderThickness" Value="1"/>
+            </Style>
+
+        <DropShadowEffect x:Key="DropShadowEffect" BlurRadius="10" ShadowDepth="3" Opacity="0.2"/>
+    </Application.Resources>
+</Application>

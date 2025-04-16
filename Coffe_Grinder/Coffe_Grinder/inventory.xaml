@@ -1,0 +1,215 @@
+﻿<Page x:Class="Coffe_Grinder.inventory"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:Coffe_Grinder"
+      mc:Ignorable="d"
+      d:DesignHeight="700" d:DesignWidth="900"
+      Title="Coffee Inventory">
+
+    <Page.Resources>
+        <!-- Modern Button Style -->
+        <Style x:Key="ModernButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#6D4C41"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect BlurRadius="4" ShadowDepth="2" Opacity="0.3"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                CornerRadius="4">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#5D4037"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- Drop Shadow Effect -->
+        <DropShadowEffect x:Key="DropShadowEffect" BlurRadius="10" ShadowDepth="3" Opacity="0.2"/>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="inventory2.jpg" Stretch="UniformToFill" Opacity="0.8"/>
+        </Grid.Background>
+
+        <!-- Main content container with shadow effect -->
+        <Border Margin="20" Background="#FFF8E1" CornerRadius="10"
+                BorderBrush="#BCAAA4" BorderThickness="1"
+                Effect="{StaticResource DropShadowEffect}">
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <!-- Header -->
+                <Label Grid.Row="0" Content="COFFEE INVENTORY MANAGEMENT" 
+                       FontSize="24" FontWeight="Bold" HorizontalAlignment="Center"
+                       Margin="0,10" Foreground="#5D4037"/>
+
+                <!-- Edit by ID and Add New Coffee Type Section (side by side) -->
+                <Grid Grid.Row="1" Margin="10,0,10,5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Edit by ID Section -->
+                    <Border Grid.Column="0" Margin="0,0,10,0" Background="#D7CCC8" CornerRadius="8"
+                            BorderBrush="#BCAAA4" BorderThickness="1" Padding="10">
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="Edit by ID:" FontSize="14" VerticalAlignment="Center" Foreground="#5D4037"/>
+                            <TextBox Name="SearchId" Width="80" Height="30" Margin="10,0" FontSize="14"
+                                     Background="#FFF8E1" BorderBrush="#8D6E63" BorderThickness="1"/>
+                            <Button Content="Find" Click="FindById" Width="80" Height="30" Margin="10,0" 
+                                    Style="{StaticResource ModernButtonStyle}"/>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Add New Coffee Type Section -->
+                    <Border Grid.Column="1" Margin="0,0,0,0" Background="#D7CCC8" CornerRadius="8"
+                            BorderBrush="#BCAAA4" BorderThickness="1" Padding="10">
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="New Coffee Type:" FontSize="14" VerticalAlignment="Center" Foreground="#5D4037"/>
+                            <TextBox Name="NewCoffeeTypeName" Width="150" Height="30" Margin="10,0" FontSize="14"
+                                     Background="#FFF8E1" BorderBrush="#8D6E63" BorderThickness="1"/>
+                            <Button Content="Add Type" Click="AddNewCoffeeType" Width="100" Height="30" Margin="10,0" 
+                                    Style="{StaticResource ModernButtonStyle}"/>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+
+                <!-- Main content area -->
+                <Grid Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Input form with card-like appearance -->
+                    <Border Grid.Column="0" Width="300" Margin="10" 
+                            Background="#FFF8E1" CornerRadius="8"
+                            BorderBrush="#BCAAA4" BorderThickness="1"
+                            Padding="15">
+                        <StackPanel>
+                            <Label Content="Inventory Details" FontSize="18" FontWeight="Bold"
+                                   Margin="0,0,0,10" Foreground="#5D4037"/>
+
+                            <Label Content="Coffee ID:" FontSize="14" Foreground="#5D4037"/>
+                            <TextBox Name="Id" Height="30" Margin="0,0,0,10" FontSize="14" IsReadOnly="True"
+                                     Background="White" BorderBrush="#8D6E63" BorderThickness="1"/>
+
+                            <Label Content="Coffee Name:" FontSize="14" Foreground="#5D4037"/>
+                            <TextBox Name="CoffeeName" Height="30" Margin="0,0,0,10" FontSize="14"
+                                     Background="White" BorderBrush="#8D6E63" BorderThickness="1"/>
+
+                            <Label Content="Coffee Type:" FontSize="14" Foreground="#5D4037"/>
+                            <ComboBox Name="CoffeeType" Height="30" Margin="0,0,0,10" FontSize="14"
+                                      DisplayMemberPath="TypeName"
+                                      Background="White" BorderBrush="#8D6E63" BorderThickness="1"/>
+
+                            <Label Content="Description:" FontSize="14" Foreground="#5D4037"/>
+                            <TextBox Name="Description" Height="60" Margin="0,0,0,10" FontSize="14"
+                                     AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"
+                                     Background="White" BorderBrush="#8D6E63" BorderThickness="1"/>
+
+                            <Grid Margin="0,0,0,10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Grid.Column="0" Margin="0,0,5,0">
+                                    <Label Content="Amount (kg):" FontSize="14" Foreground="#5D4037"/>
+                                    <TextBox Name="Amount" Height="30" FontSize="14"
+                                             Background="White" BorderBrush="#8D6E63" BorderThickness="1"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" Margin="5,0,0,0">
+                                    <Label Content="Price/kg:" FontSize="14" Foreground="#5D4037"/>
+                                    <TextBox Name="PricePerKg" Height="30" FontSize="14"
+                                             Background="White" BorderBrush="#8D6E63" BorderThickness="1"/>
+                                </StackPanel>
+                            </Grid>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- DataGrid with improved styling -->
+                    <Border Grid.Column="1" Margin="10" CornerRadius="8"
+                            Background="#FFF8E1" BorderBrush="#BCAAA4" BorderThickness="1">
+                        <DataGrid x:Name="CoffeeDataGrid" AutoGenerateColumns="False" 
+                                 HeadersVisibility="Column" IsReadOnly="True"
+                                 SelectionMode="Single" SelectionUnit="FullRow"
+                                 FontSize="14" RowHeight="30" Background="White"
+                                 BorderThickness="0" Foreground="#5D4037">
+                            <DataGrid.ColumnHeaderStyle>
+                                <Style TargetType="DataGridColumnHeader">
+                                    <Setter Property="Background" Value="#5D4037"/>
+                                    <Setter Property="Foreground" Value="White"/>
+                                    <Setter Property="FontWeight" Value="Bold"/>
+                                    <Setter Property="Padding" Value="10,5"/>
+                                </Style>
+                            </DataGrid.ColumnHeaderStyle>
+                            <DataGrid.RowStyle>
+                                <Style TargetType="DataGridRow">
+                                    <Setter Property="Background" Value="White"/>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsSelected" Value="True">
+                                            <Setter Property="Background" Value="#D7CCC8"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </DataGrid.RowStyle>
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="ID" Binding="{Binding CoffeeID}" Width="0.5*"/>
+                                <DataGridTextColumn Header="Coffee Name" Binding="{Binding CoffeeName}" Width="1.5*"/>
+                                <DataGridTextColumn Header="Type" Binding="{Binding CoffeeType.TypeName}" Width="1*"/>
+                                <DataGridTextColumn Header="Description" Binding="{Binding Description}" Width="2*"/>
+                                <DataGridTextColumn Header="Qty (kg)" Binding="{Binding QuantityInStock}" Width="0.8*"/>
+                                <DataGridTextColumn Header="Price/Kg" Binding="{Binding PricePerKg, StringFormat=C}" Width="1*">
+                                    <DataGridTextColumn.ElementStyle>
+                                        <Style TargetType="TextBlock">
+                                            <Setter Property="HorizontalAlignment" Value="Right"/>
+                                            <Setter Property="Margin" Value="0,0,10,0"/>
+                                        </Style>
+                                    </DataGridTextColumn.ElementStyle>
+                                </DataGridTextColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Border>
+                </Grid>
+
+                <!-- Action buttons with improved styling -->
+                <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,15">
+                    <Button Content="Refresh" Click="refresh" Width="120" Height="40" Margin="5" 
+                            Style="{StaticResource ModernButtonStyle}"/>
+                    <Button Content="Add" Click="add" Width="120" Height="40" Margin="5"
+                            Style="{StaticResource ModernButtonStyle}"/>
+                    <Button Content="Update" Click="update" Width="120" Height="40" Margin="5"
+                            Style="{StaticResource ModernButtonStyle}"/>
+                    <Button Content="Delete" Click="delete" Width="120" Height="40" Margin="5"
+                            Style="{StaticResource ModernButtonStyle}"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

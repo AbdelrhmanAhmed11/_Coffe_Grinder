@@ -1,0 +1,421 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Projects\\Coffe_Grinder\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|Coffe_Grinder||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|c:\\projects\\coffe_grinder\\coffe_grinder\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|solutionrelative:coffe_grinder\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|C:\\Projects\\Coffe_Grinder\\coffe_grinder\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|solutionrelative:coffe_grinder\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|C:\\Projects\\Coffe_Grinder\\coffe_grinder\\adminhomepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|solutionrelative:coffe_grinder\\adminhomepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|C:\\Projects\\Coffe_Grinder\\coffe_grinder\\adminhomepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|solutionrelative:coffe_grinder\\adminhomepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|C:\\Projects\\Coffe_Grinder\\coffe_grinder\\orderstatuswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|solutionrelative:coffe_grinder\\orderstatuswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|C:\\Projects\\Coffe_Grinder\\coffe_grinder\\inventory.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|solutionrelative:coffe_grinder\\inventory.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|C:\\Projects\\Coffe_Grinder\\coffe_grinder\\inventory.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|solutionrelative:coffe_grinder\\inventory.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|C:\\Projects\\Coffe_Grinder\\coffe_grinder\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|solutionrelative:coffe_grinder\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|C:\\Projects\\Coffe_Grinder\\coffe_grinder\\welcome.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|solutionrelative:coffe_grinder\\welcome.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|C:\\Projects\\Coffe_Grinder\\coffe_grinder\\invoicewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|solutionrelative:coffe_grinder\\invoicewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|C:\\Projects\\Coffe_Grinder\\coffe_grinder\\invoicewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|solutionrelative:coffe_grinder\\invoicewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|C:\\Projects\\Coffe_Grinder\\coffe_grinder\\stringtovisibilityconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|solutionrelative:coffe_grinder\\stringtovisibilityconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|C:\\Projects\\Coffe_Grinder\\coffe_grinder\\orderspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|solutionrelative:coffe_grinder\\orderspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|C:\\Projects\\Coffe_Grinder\\coffe_grinder\\orderspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|solutionrelative:coffe_grinder\\orderspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|C:\\Projects\\Coffe_Grinder\\coffe_grinder\\createorderpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|solutionrelative:coffe_grinder\\createorderpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|C:\\Projects\\Coffe_Grinder\\coffe_grinder\\createorderpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|solutionrelative:coffe_grinder\\createorderpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|C:\\Projects\\Coffe_Grinder\\coffe_grinder\\admin_login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|solutionrelative:coffe_grinder\\admin_login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|C:\\Projects\\Coffe_Grinder\\coffe_grinder\\coffeitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|solutionrelative:coffe_grinder\\coffeitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|C:\\Projects\\Coffe_Grinder\\coffe_grinder\\admin_login.jpg||{58961B49-13E0-48C0-9258-13CBC4D40279}",
+      "RelativeMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|solutionrelative:coffe_grinder\\admin_login.jpg||{58961B49-13E0-48C0-9258-13CBC4D40279}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|C:\\Projects\\Coffe_Grinder\\coffe_grinder\\welcome.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|solutionrelative:coffe_grinder\\welcome.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|C:\\Projects\\Coffe_Grinder\\coffe_grinder\\orderstatuswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|solutionrelative:coffe_grinder\\orderstatuswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|C:\\Projects\\Coffe_Grinder\\coffe_grinder\\admin_login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|solutionrelative:coffe_grinder\\admin_login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|C:\\Projects\\Coffe_Grinder\\coffe_grinder\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|solutionrelative:coffe_grinder\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|C:\\Projects\\Coffe_Grinder\\coffe_grinder\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|solutionrelative:coffe_grinder\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5343B776-CFF0-4427-AED3-9F256A5988CE}|Coffe_Grinder\\Coffe_Grinder.csproj|c:\\projects\\coffe_grinder\\coffe_grinder\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 58,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "OrdersPage.xaml.cs",
+              "DocumentMoniker": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\OrdersPage.xaml.cs",
+              "RelativeDocumentMoniker": "Coffe_Grinder\\OrdersPage.xaml.cs",
+              "ToolTip": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\OrdersPage.xaml.cs",
+              "RelativeToolTip": "Coffe_Grinder\\OrdersPage.xaml.cs",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAwwI0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T17:06:18.639Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "inventory.xaml",
+              "DocumentMoniker": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\inventory.xaml",
+              "RelativeDocumentMoniker": "Coffe_Grinder\\inventory.xaml",
+              "ToolTip": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\inventory.xaml",
+              "RelativeToolTip": "Coffe_Grinder\\inventory.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-15T14:31:36.199Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Adminhomepage.xaml.cs",
+              "DocumentMoniker": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\Adminhomepage.xaml.cs",
+              "RelativeDocumentMoniker": "Coffe_Grinder\\Adminhomepage.xaml.cs",
+              "ToolTip": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\Adminhomepage.xaml.cs",
+              "RelativeToolTip": "Coffe_Grinder\\Adminhomepage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T15:54:21.148Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Coffe_Grinder",
+              "DocumentMoniker": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\Coffe_Grinder.csproj",
+              "RelativeDocumentMoniker": "Coffe_Grinder\\Coffe_Grinder.csproj",
+              "ToolTip": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\Coffe_Grinder.csproj",
+              "RelativeToolTip": "Coffe_Grinder\\Coffe_Grinder.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-04-16T13:48:35.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Adminhomepage.xaml",
+              "DocumentMoniker": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\Adminhomepage.xaml",
+              "RelativeDocumentMoniker": "Coffe_Grinder\\Adminhomepage.xaml",
+              "ToolTip": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\Adminhomepage.xaml",
+              "RelativeToolTip": "Coffe_Grinder\\Adminhomepage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-13T15:14:37.059Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OrderStatusWindow.xaml",
+              "DocumentMoniker": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\OrderStatusWindow.xaml",
+              "RelativeDocumentMoniker": "Coffe_Grinder\\OrderStatusWindow.xaml",
+              "ToolTip": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\OrderStatusWindow.xaml",
+              "RelativeToolTip": "Coffe_Grinder\\OrderStatusWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-15T17:07:38.57Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Model1.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\Model1.edmx",
+              "RelativeDocumentMoniker": "Coffe_Grinder\\Model1.edmx",
+              "ToolTip": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\Model1.edmx [Diagram1]",
+              "RelativeToolTip": "Coffe_Grinder\\Model1.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2025-04-16T14:41:37.681Z",
+              "EditorCaption": " [Diagram1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "inventory.xaml.cs",
+              "DocumentMoniker": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\inventory.xaml.cs",
+              "RelativeDocumentMoniker": "Coffe_Grinder\\inventory.xaml.cs",
+              "ToolTip": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\inventory.xaml.cs",
+              "RelativeToolTip": "Coffe_Grinder\\inventory.xaml.cs",
+              "ViewState": "AgIAANwAAAAAAAAAAAAiwPAAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T15:04:40.297Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\App.config",
+              "RelativeDocumentMoniker": "Coffe_Grinder\\App.config",
+              "ToolTip": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\App.config",
+              "RelativeToolTip": "Coffe_Grinder\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAADNAQAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-04-13T15:28:50.918Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CreateOrderPage.xaml.cs",
+              "DocumentMoniker": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\CreateOrderPage.xaml.cs",
+              "RelativeDocumentMoniker": "Coffe_Grinder\\CreateOrderPage.xaml.cs",
+              "ToolTip": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\CreateOrderPage.xaml.cs",
+              "RelativeToolTip": "Coffe_Grinder\\CreateOrderPage.xaml.cs",
+              "ViewState": "AgIAAMcAAAAAAAAAAAAAAMoAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T17:37:24.994Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "OrdersPage.xaml",
+              "DocumentMoniker": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\OrdersPage.xaml",
+              "RelativeDocumentMoniker": "Coffe_Grinder\\OrdersPage.xaml",
+              "ToolTip": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\OrdersPage.xaml",
+              "RelativeToolTip": "Coffe_Grinder\\OrdersPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-15T17:02:58.54Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CreateOrderPage.xaml",
+              "DocumentMoniker": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\CreateOrderPage.xaml",
+              "RelativeDocumentMoniker": "Coffe_Grinder\\CreateOrderPage.xaml",
+              "ToolTip": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\CreateOrderPage.xaml",
+              "RelativeToolTip": "Coffe_Grinder\\CreateOrderPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-15T17:34:03.136Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "StringToVisibilityConverter.cs",
+              "DocumentMoniker": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\StringToVisibilityConverter.cs",
+              "RelativeDocumentMoniker": "Coffe_Grinder\\StringToVisibilityConverter.cs",
+              "ToolTip": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\StringToVisibilityConverter.cs",
+              "RelativeToolTip": "Coffe_Grinder\\StringToVisibilityConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T21:06:45.514Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Admin_login.xaml",
+              "DocumentMoniker": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\Admin_login.xaml",
+              "RelativeDocumentMoniker": "Coffe_Grinder\\Admin_login.xaml",
+              "ToolTip": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\Admin_login.xaml",
+              "RelativeToolTip": "Coffe_Grinder\\Admin_login.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-12T17:13:20.955Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\App.xaml",
+              "RelativeDocumentMoniker": "Coffe_Grinder\\App.xaml",
+              "ToolTip": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\App.xaml",
+              "RelativeToolTip": "Coffe_Grinder\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-15T15:19:10.289Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "welcome.xaml",
+              "DocumentMoniker": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\welcome.xaml",
+              "RelativeDocumentMoniker": "Coffe_Grinder\\welcome.xaml",
+              "ToolTip": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\welcome.xaml",
+              "RelativeToolTip": "Coffe_Grinder\\welcome.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-12T16:22:41.656Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "InvoiceWindow.xaml",
+              "DocumentMoniker": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\InvoiceWindow.xaml",
+              "RelativeDocumentMoniker": "Coffe_Grinder\\InvoiceWindow.xaml",
+              "ToolTip": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\InvoiceWindow.xaml",
+              "RelativeToolTip": "Coffe_Grinder\\InvoiceWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-15T17:08:21.819Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "InvoiceWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\InvoiceWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Coffe_Grinder\\InvoiceWindow.xaml.cs",
+              "ToolTip": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\InvoiceWindow.xaml.cs",
+              "RelativeToolTip": "Coffe_Grinder\\InvoiceWindow.xaml.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAYwCwAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T17:08:43.305Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CoffeItem.cs",
+              "DocumentMoniker": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\CoffeItem.cs",
+              "RelativeDocumentMoniker": "Coffe_Grinder\\CoffeItem.cs",
+              "ToolTip": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\CoffeItem.cs",
+              "RelativeToolTip": "Coffe_Grinder\\CoffeItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T19:18:57.784Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "welcome.xaml.cs",
+              "DocumentMoniker": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\welcome.xaml.cs",
+              "RelativeDocumentMoniker": "Coffe_Grinder\\welcome.xaml.cs",
+              "ToolTip": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\welcome.xaml.cs",
+              "RelativeToolTip": "Coffe_Grinder\\welcome.xaml.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAuwCEAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T18:48:02.817Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Admin_login.jpg",
+              "DocumentMoniker": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\Admin_login.jpg",
+              "RelativeDocumentMoniker": "Coffe_Grinder\\Admin_login.jpg",
+              "ToolTip": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\Admin_login.jpg",
+              "RelativeToolTip": "Coffe_Grinder\\Admin_login.jpg",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-04-15T19:03:56.483Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Admin_login.xaml.cs",
+              "DocumentMoniker": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\Admin_login.xaml.cs",
+              "RelativeDocumentMoniker": "Coffe_Grinder\\Admin_login.xaml.cs",
+              "ToolTip": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\Admin_login.xaml.cs",
+              "RelativeToolTip": "Coffe_Grinder\\Admin_login.xaml.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAWwCIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T18:38:34.264Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\App.xaml.cs",
+              "RelativeDocumentMoniker": "Coffe_Grinder\\App.xaml.cs",
+              "ToolTip": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\App.xaml.cs",
+              "RelativeToolTip": "Coffe_Grinder\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T15:55:01.709Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "OrderStatusWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\OrderStatusWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Coffe_Grinder\\OrderStatusWindow.xaml.cs",
+              "ToolTip": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\OrderStatusWindow.xaml.cs",
+              "RelativeToolTip": "Coffe_Grinder\\OrderStatusWindow.xaml.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAqwDwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T17:08:01.839Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Coffe_Grinder\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Projects\\Coffe_Grinder\\Coffe_Grinder\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Coffe_Grinder\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T16:06:23.6Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
